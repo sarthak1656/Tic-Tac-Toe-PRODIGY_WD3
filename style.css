@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f9;
+}
+
+.game-container {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.mode-selection {
+  position: relative;
+}
+
+.mode-selection #multiplayer-btn {
+  background-color: #00aaff;
+  border: none;
+  border-radius: 5px;
+}
+.mode-selection #ai-btn {
+  background-color: #ff5733;
+  border: none;
+  border-radius: 5px;
+}
+
+.mode-selection button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mode-indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.indicator {
+  width: 100px;
+  height: 4px;
+  margin: 0 5px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+#multiplayer-indicator.active {
+  background-color: #00aaff;
+}
+
+#ai-indicator.active {
+  background-color: #ff5733;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px auto;    
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cell.taken {
+  pointer-events: none;
+  color: #333;
+}
+
+.result {
+  margin-top: 20px;
+  display: none;
+}
+
+#restart-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(233, 7, 7, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border: none;
+  color: #f4f4f9;
+  border-radius: 5px;
+}
